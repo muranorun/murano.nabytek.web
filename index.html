@@ -258,52 +258,39 @@
 
     <!-- ФОРМА з i18n + твій Formspree endpoint -->
     <form action="https://formspree.io/f/mrbyqylv" method="POST"
-          class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
-      <div class="mb-4">
-        <label class="block text-left mb-2 font-semibold"
-               data-i18n
-               data-ua="Ваше ім’я"
-               data-cz="Vaše jméno"></label>
-        <input type="text" name="name" required
-               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"
-               placeholder="Ваше ім’я"
-               data-i18n-ph
-               data-ua="Ваше ім’я"
-               data-cz="Vaše jméno">
-      </div>
+      class="bg-white text-charcoal p-6 rounded-lg shadow-md max-w-lg mx-auto">
+  <div class="mb-4">
+    <label class="block text-left mb-2 font-semibold text-gray-800"
+           data-i18n data-ua="Ваше ім’я" data-cz="Vaše jméno"></label>
+    <input type="text" name="name" required
+           class="w-full border border-gray-300 rounded-lg px-4 py-2 text-charcoal placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal"
+           placeholder="Ваше ім’я"
+           data-i18n-ph data-ua="Ваше ім’я" data-cz="Vaše jméno">
+  </div>
 
-      <div class="mb-4">
-        <label class="block text-left mb-2 font-semibold"
-               data-i18n
-               data-ua="Телефон / WhatsApp"
-               data-cz="Telefon / WhatsApp"></label>
-        <input type="tel" name="phone" required
-               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"
-               placeholder="Телефон / WhatsApp"
-               data-i18n-ph
-               data-ua="Телефон / WhatsApp"
-               data-cz="Telefon / WhatsApp">
-      </div>
+  <div class="mb-4">
+    <label class="block text-left mb-2 font-semibold text-gray-800"
+           data-i18n data-ua="Телефон / WhatsApp" data-cz="Telefon / WhatsApp"></label>
+    <input type="tel" name="phone" required
+           class="w-full border border-gray-300 rounded-lg px-4 py-2 text-charcoal placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal"
+           placeholder="Телефон / WhatsApp"
+           data-i18n-ph data-ua="Телефон / WhatsApp" data-cz="Telefon / WhatsApp">
+  </div>
 
-      <div class="mb-4">
-        <label class="block text-left mb-2 font-semibold"
-               data-i18n
-               data-ua="Повідомлення"
-               data-cz="Zpráva"></label>
-        <textarea name="message" rows="4" required
-                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"
-                  placeholder="Повідомлення"
-                  data-i18n-ph
-                  data-ua="Повідомлення"
-                  data-cz="Zpráva"></textarea>
-      </div>
+  <div class="mb-4">
+    <label class="block text-left mb-2 font-semibold text-gray-800"
+           data-i18n data-ua="Повідомлення" data-cz="Zpráva"></label>
+    <textarea name="message" rows="4" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-charcoal placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal"
+              placeholder="Повідомлення"
+              data-i18n-ph data-ua="Повідомлення" data-cz="Zpráva"></textarea>
+  </div>
 
-      <button type="submit"
-              class="bg-teal hover:bg-teal/90 text-warm-white font-bold py-3 px-6 rounded-lg transition"
-              data-i18n
-              data-ua="Надіслати заявку"
-              data-cz="Odeslat poptávku"></button>
-    </form>
+  <button type="submit"
+          class="bg-teal hover:bg-teal/90 text-warm-white font-bold py-3 px-6 rounded-lg transition"
+          data-i18n data-ua="Надіслати заявку" data-cz="Odeslat poptávku"></button>
+</form>
+
 
     <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mt-10">
       <div class="text-lg">
