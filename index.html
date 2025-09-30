@@ -228,41 +228,93 @@
             </div>
         </section>
         
-        <section id="contact" class="bg-charcoal text-warm-white py-16 md:py-24">
+       <section id="contact" class="bg-charcoal text-warm-white py-16 md:py-24">
   <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title" data-ua="Зв'яжіться з нами" data-cz="Kontaktujte nás"></h2>
-    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="contact-intro" data-ua="Готові обговорити ваш проєкт? Надішліть розміри та отримайте безкоштовну 3D-візуалізацію та прорахунок!" data-cz="Jste připraveni probrat váš projekt? Zašlete rozměry a získejte zdarma 3D vizualizaci a kalkulaci!"></p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4"
+        data-i18n
+        data-ua="Зв'яжіться з нами"
+        data-cz="Kontaktujte nás"></h2>
 
-    <div class="bg-warm-white text-charcoal p-8 rounded-lg max-w-lg mx-auto mb-10">
-      <form action="https://formspree.io/f/mrbyqylv" method="POST" class="space-y-4">
-        <div>
-          <label class="block mb-2 font-semibold" for="name">Ваше ім’я</label>
-          <input type="text" name="name" id="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal">
-        </div>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8"
+       data-i18n
+       data-ua="Готові обговорити ваш проєкт? Надішліть розміри та отримайте безкоштовну 3D-візуалізацію та прорахунок!"
+       data-cz="Jste připraveni probrat váš projekt? Zašlete rozměry a získejte zdarma 3D vizualizaci a kalkulaci!"></p>
 
-        <div>
-          <label class="block mb-2 font-semibold" for="phone">Телефон / WhatsApp</label>
-          <input type="tel" name="phone" id="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal">
-        </div>
-
-        <div>
-          <label class="block mb-2 font-semibold" for="message">Повідомлення</label>
-          <textarea name="message" id="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"></textarea>
-        </div>
-
-        <button type="submit" class="bg-teal hover:bg-teal/90 text-warm-white font-bold py-3 px-6 rounded-lg transition">
-          Надіслати заявку
-        </button>
-      </form>
+    <!-- promo block (за бажанням відредагуйте дати/текст) -->
+    <div class="bg-teal p-8 rounded-lg max-w-md mx-auto mb-10">
+      <h3 class="text-xl font-bold mb-2"
+          data-i18n
+          data-ua="Спеціальна пропозиція"
+          data-cz="Speciální nabídka"></h3>
+      <p class="text-2xl font-bold"
+         data-i18n
+         data-ua="-10% на монтаж"
+         data-cz="-10 % na montáž"></p>
+      <p class="text-sm"
+         data-i18n
+         data-ua="При замовленні до 31.10.2025"
+         data-cz="Při objednávce do 31.10.2025"></p>
     </div>
 
-    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+    <!-- ФОРМА з i18n + твій Formspree endpoint -->
+    <form action="https://formspree.io/f/mrbyqylv" method="POST"
+          class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+      <div class="mb-4">
+        <label class="block text-left mb-2 font-semibold"
+               data-i18n
+               data-ua="Ваше ім’я"
+               data-cz="Vaše jméno"></label>
+        <input type="text" name="name" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"
+               placeholder="Ваше ім’я"
+               data-i18n-ph
+               data-ua="Ваше ім’я"
+               data-cz="Vaše jméno">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-left mb-2 font-semibold"
+               data-i18n
+               data-ua="Телефон / WhatsApp"
+               data-cz="Telefon / WhatsApp"></label>
+        <input type="tel" name="phone" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"
+               placeholder="Телефон / WhatsApp"
+               data-i18n-ph
+               data-ua="Телефон / WhatsApp"
+               data-cz="Telefon / WhatsApp">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-left mb-2 font-semibold"
+               data-i18n
+               data-ua="Повідомлення"
+               data-cz="Zpráva"></label>
+        <textarea name="message" rows="4" required
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"
+                  placeholder="Повідомлення"
+                  data-i18n-ph
+                  data-ua="Повідомлення"
+                  data-cz="Zpráva"></textarea>
+      </div>
+
+      <button type="submit"
+              class="bg-teal hover:bg-teal/90 text-warm-white font-bold py-3 px-6 rounded-lg transition"
+              data-i18n
+              data-ua="Надіслати заявку"
+              data-cz="Odeslat poptávku"></button>
+    </form>
+
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mt-10">
       <div class="text-lg">
-        <p class="font-semibold">WhatsApp / Тел.</p>
+        <p class="font-semibold"
+           data-i18n
+           data-ua="WhatsApp / Тел."
+           data-cz="WhatsApp / Tel."></p>
         <a href="tel:+420722720662" class="hover:text-teal transition-colors">+420 722 720 662</a>
       </div>
       <div class="text-lg">
-        <p class="font-semibold">Instagram:</p>
+        <p class="font-semibold">Instagram</p>
         <a href="https://www.instagram.com/muranonabytek" target="_blank" class="hover:text-teal transition-colors">@muranonabytek</a>
       </div>
     </div>
@@ -279,54 +331,65 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const langButtons = {
-                ua: document.getElementById('lang-ua'),
-                cz: document.getElementById('lang-cz')
-            };
-            const i18nElements = document.querySelectorAll('[data-i18n]');
-            
-            function switchLanguage(lang) {
-                if (!['ua', 'cz'].includes(lang)) lang = 'ua';
-                
-                i18nElements.forEach(el => {
-                    el.textContent = el.dataset[lang] || el.dataset['ua'];
-                });
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const langButtons = {
+      ua: document.getElementById('lang-ua'),
+      cz: document.getElementById('lang-cz'),
+    };
 
-                document.documentElement.lang = lang;
-                
-                Object.values(langButtons).forEach(btn => btn.classList.remove('active'));
-                if (langButtons[lang]) {
-                    langButtons[lang].classList.add('active');
-                }
-            }
+    function switchLanguage(lang) {
+      if (!['ua', 'cz'].includes(lang)) lang = 'ua';
 
-            Object.values(langButtons).forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    switchLanguage(e.target.dataset.lang);
-                });
-            });
+      // Текстові елементи (заміна вмісту)
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const val = el.dataset[lang] || el.dataset.ua || el.textContent;
+        // якщо це інпут/тексарея з data-i18n (рідко, але на всякий)
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName)) {
+          el.value = val;
+        } else {
+          el.textContent = val;
+        }
+      });
 
-            const serviceCards = document.querySelectorAll('.service-card-wrapper');
-            serviceCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const serviceId = card.dataset.service;
-                    const descEl = document.getElementById(`desc-${serviceId}`);
-                    
-                    const wasOpen = !descEl.classList.contains('hidden');
-                    
-                    document.querySelectorAll('.service-description').forEach(el => el.classList.add('hidden'));
+      // Плейсхолдери у формі
+      document.querySelectorAll('[data-i18n-ph]').forEach((el) => {
+        const ph = el.dataset[lang] || el.dataset.ua || el.getAttribute('placeholder');
+        el.setAttribute('placeholder', ph);
+      });
 
-                    if (!wasOpen) {
-                        descEl.classList.remove('hidden');
-                    }
-                });
-            });
+      // HTML lang
+      document.documentElement.lang = lang;
 
-            switchLanguage('ua');
-        });
-    </script>
+      // Активна кнопка мови
+      Object.values(langButtons).forEach((btn) => btn && btn.classList.remove('active'));
+      if (langButtons[lang]) langButtons[lang].classList.add('active');
+    }
+
+    // Клік по перемикачах мови
+    Object.values(langButtons).forEach((btn) => {
+      if (!btn) return;
+      btn.addEventListener('click', (e) => switchLanguage(e.currentTarget.dataset.lang));
+    });
+
+    // Тогл описів сервісів
+    document.querySelectorAll('.service-card-wrapper').forEach((card) => {
+      card.addEventListener('click', () => {
+        const serviceId = card.dataset.service;
+        const descEl = document.getElementById(`desc-${serviceId}`);
+        const wasOpen = !descEl.classList.contains('hidden');
+        document.querySelectorAll('.service-description').forEach((el) => el.classList.add('hidden'));
+        if (!wasOpen) descEl.classList.remove('hidden');
+      });
+    });
+
+    // Стартова мова: UA за замовчуванням, але якщо браузер чеський — CZ
+    const browserLang = (navigator.language || '').toLowerCase();
+    const startLang = browserLang.startsWith('cs') ? 'cz' : 'ua';
+    switchLanguage(startLang);
+  });
+</script>
+
 
 </body>
 </html>
