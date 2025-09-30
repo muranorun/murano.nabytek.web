@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murano Nábytek — Меблі на замовлення в Празі</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Murano Modern (Charcoal, Warm White, Oak, Teal) -->
+    <!-- Application Structure Plan: The application is structured as a single, scrollable landing page with thematic sections to guide the user logically from initial interest to conversion. The flow is: Hero (immediate value proposition) -> Services (visual portfolio) -> Why Us (key benefits) -> Process (builds trust) -> About (deepens connection) -> CTA (conversion). This non-linear but guided structure allows users to explore at their own pace while ensuring all key marketing messages are presented effectively. An interactive language switcher (UA/CZ) is included for accessibility to the target audience. -->
+    <!-- Visualization & Content Choices: Report Info -> Services. Goal -> Organize/Inform. Method -> Interactive image grid. Interaction -> Clicking a service reveals its description. Justification -> Visually engaging way to showcase products. Report Info -> Key Benefits. Goal -> Inform. Method -> Icon-based feature grid. Interaction -> Subtle hover effects. Justification -> Quickly communicates value. Report Info -> Work Process. Goal -> Organize/Build Trust. Method -> Numbered step-by-step visual timeline. Justification -> Clarifies the customer journey. All elements use HTML/Tailwind for structure and JS for interactivity. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            background-color: #F9F7F3;
+            color: #1F2937;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-charcoal { background-color: #1F2937; }
+        .bg-warm-white { background-color: #F9F7F3; }
+        .bg-oak { background-color: #C49A6C; }
+        .bg-teal { background-color: #1DB5A6; }
+        .text-charcoal { color: #1F2937; }
+        .text-warm-white { color: #F9F7F3; }
+        .text-oak { color: #C49A6C; }
+        .text-teal { color: #1DB5A6; }
+        .border-teal { border-color: #1DB5A6; }
+        .shadow-oak { box-shadow: 0 10px 15px -3px rgba(196, 154, 108, 0.2), 0 4px 6px -2px rgba(196, 154, 108, 0.1); }
+        .lang-btn.active {
+            background-color: #1DB5A6;
+            color: #F9F7F3;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-warm-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h3 class="text-xl font-bold text-charcoal">Murano Nábytek</h3>
+            <div class="flex items-center space-x-2 border border-gray-300 rounded-full p-1">
+                <button id="lang-ua" class="lang-btn px-3 py-1 text-sm rounded-full transition-colors duration-300 active" data-lang="ua">UA</button>
+                <button id="lang-cz" class="lang-btn px-3 py-1 text-sm rounded-full transition-colors duration-300" data-lang="cz">CZ</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative min-h-[80vh] flex items-center">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2070&auto=format&fit=crop" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/F9F7F3/1F2937?text=Murano+Nabytek';"
+                 alt="Modern interior with custom furniture" class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative container mx-auto px-6 text-center text-warm-white">
+                <div class="bg-charcoal/50 backdrop-blur-sm p-8 rounded-lg">
+                    <p class="bg-teal text-warm-white text-sm font-semibold uppercase tracking-wider px-4 py-1 mb-4 rounded-full inline-block" data-i18n="hero-badge" data-ua="Преміум меблі на замовлення в Празі" data-cz="Nábytek na míru v Praze"></p>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4" data-i18n="hero-title" data-ua="Кухні • Шафи-купе • Ванні тумби" data-cz="Kuchyně • Vestavné skříně • Koupelnové skříňky"></h1>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8" data-i18n="hero-subtitle" data-ua="Власне виробництво. Швидко, чесно, під ключ." data-cz="Vlastní dílna. Rychle, férově, na klíč."></p>
+                    <a href="#contact" class="bg-teal hover:bg-teal/90 text-warm-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105" data-i18n="hero-cta" data-ua="Отримати прорахунок зараз →" data-cz="Nezávazná kalkulace →"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="services-title" data-ua="Наші Послуги" data-cz="Naše Služby"></h2>
+                    <p class="text-lg text-gray-600" data-i18n="services-intro" data-ua="Створюємо індивідуальні рішення для кожної кімнати. Натисніть на категорію, щоб дізнатись більше." data-cz="Vytváříme individuální řešení pro každou místnost. Klikněte na kategorii a dozvíte se více."></p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="service-card-wrapper" data-service="kitchens">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop" 
+                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Kuchyne';"
+                                 alt="Custom kitchen" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold" data-i18n="service-kitchens-title" data-ua="Кухні на замовлення" data-cz="Kuchyně na míru"></h3>
+                            </div>
+                        </div>
+                        <div id="desc-kitchens" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+                            <p data-i18n="service-kitchens-desc" data-ua="Проектуємо функціональні та стильні кухні з урахуванням всієї техніки, електрики та сантехніки." data-cz="Projektujeme funkční a stylové kuchyně s ohledem na veškeré spotřebiče, elektroinstalaci a vodoinstalaci."></p>
+                        </div>
+                    </div>
+                    <div class="service-card-wrapper" data-service="wardrobes">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+                            <img src="https://images.unsplash.com/photo-1618221319989-87d3a1f33f01?q=80&w=1964&auto=format&fit=crop"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Skrine';"
+                                 alt="Built-in wardrobe" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold" data-i18n="service-wardrobes-title" data-ua="Шафи-купе та гардеробні" data-cz="Vestavné skříně a šatny"></h3>
+                            </div>
+                        </div>
+                        <div id="desc-wardrobes" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+                           <p data-i18n="service-wardrobes-desc" data-ua="Оптимізуємо простір за допомогою вбудованих шаф та гардеробних систем будь-якої складності." data-cz="Optimalizujeme prostor pomocí vestavných skříní a šatních systémů jakékoli složitosti."></p>
+                        </div>
+                    </div>
+                    <div class="service-card-wrapper" data-service="bathrooms">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+                             <img src="https://images.unsplash.com/photo-1599875824823-6a98a445d47e?q=80&w=1964&auto=format&fit=crop"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Koupelny';"
+                                 alt="Bathroom cabinet" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold" data-i18n="service-bathrooms-title" data-ua="Ванні тумби" data-cz="Koupelnové skříňky"></h3>
+                            </div>
+                        </div>
+                         <div id="desc-bathrooms" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+                           <p data-i18n="service-bathrooms-desc" data-ua="Виготовляємо меблі для ванних кімнат із вологостійких матеріалів з якісною фурнітурою." data-cz="Vyrábíme koupelnový nábytek z vlhkuvzdorných materiálů s kvalitním kováním."></p>
+                        </div>
+                    </div>
+                    <div class="service-card-wrapper" data-service="halls">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+                            <img src="https://images.unsplash.com/photo-1588730419163-490501a1e0b5?q=80&w=1974&auto=format&fit=crop"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Predsine';"
+                                 alt="Hallway furniture" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold" data-i18n="service-halls-title" data-ua="Прихожі та інше" data-cz="Předsíně a další"></h3>
+                            </div>
+                        </div>
+                        <div id="desc-halls" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+                           <p data-i18n="service-halls-desc" data-ua="Створюємо комоди, столи, меблі для прихожих та будь-які інші корпусні меблі за вашими розмірами." data-cz="Vyrábíme komody, stoly, předsíňový nábytek a jakýkoli jiný skříňový nábytek na míru."></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="bg-gray-50 py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="benefits-title" data-ua="Чому обирають нас?" data-cz="Proč si vybrat nás?"></h2>
+                    <p class="text-lg text-gray-600" data-i18n="benefits-intro" data-ua="Ми поєднуємо швидкість, якість та індивідуальний підхід на власному виробництві в Празі." data-cz="Spojujeme rychlost, kvalitu a individuální přístup ve vlastní dílně v Praze."></p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-teal">⏱️</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="benefit1-title" data-ua="Виробництво 5–14 днів" data-cz="Výroba 5–14 dní"></h3>
+                        <p class="text-gray-600" data-i18n="benefit1-desc" data-ua="Власна майстерня дозволяє нам виконувати ключові замовлення в найкоротші терміни." data-cz="Vlastní dílna nám umožňuje realizovat klíčové zakázky v nejkratším možném termínu."></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-teal">🔩</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="benefit2-title" data-ua="Фурнітура BLUM / Hettich" data-cz="Kování BLUM / Hettich"></h3>
+                        <p class="text-gray-600" data-i18n="benefit2-desc" data-ua="Використовуємо лише перевірену фурнітуру від світових лідерів для довговічності ваших меблів." data-cz="Používáme pouze prověřené kování od světových lídrů pro dlouhou životnost vašeho nábytku."></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-teal">🛡️</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="benefit3-title" data-ua="24 місяці гарантії" data-cz="Záruka 24 měsíců"></h3>
+                        <p class="text-gray-600" data-i18n="benefit3-desc" data-ua="Ми впевнені в якості своєї роботи, тому надаємо повну гарантію на всі наші вироби." data-cz="Jsme si jisti kvalitou naší práce, a proto poskytujeme plnou záruku na všechny naše výrobky."></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-teal">🚚</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="benefit4-title" data-ua="Доставка + монтаж" data-cz="Doprava + montáž"></h3>
+                        <p class="text-gray-600" data-i18n="benefit4-desc" data-ua="Надаємо повний сервіс під ключ, включаючи обережну доставку та професійний монтаж." data-cz="Poskytujeme kompletní servis na klíč, včetně pečlivé dopravy a profesionální montáže."></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-teal">🧊</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="benefit5-title" data-ua="Безкоштовний 3D-проєкт" data-cz="3D návrh zdarma"></h3>
+                        <p class="text-gray-600" data-i18n="benefit5-desc" data-ua="Візуалізуйте майбутні меблі! Створимо детальний 3D-проєкт протягом 24 годин після надання розмірів." data-cz="Vizualizujte si svůj budoucí nábytek! Vytvoříme podrobný 3D návrh do 24 hodin po dodání rozměrů."></p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-teal">💡</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="benefit6-title" data-ua="Комплексний підхід" data-cz="Komplexní přístup"></h3>
+                        <p class="text-gray-600" data-i18n="benefit6-desc" data-ua="Враховуємо все: від розташування розеток та сантехніки до інтеграції LED-підсвітки." data-cz="Bereme v úvahu vše: od umístění zásuvek a vodoinstalace až po integraci LED osvětlení."></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="process-title" data-ua="Як ми працюємо" data-cz="Jak postupujeme"></h2>
+                    <p class="text-lg text-gray-600" data-i18n="process-intro" data-ua="Наш процес простий, прозорий і орієнтований на ваш комфорт на кожному етапі." data-cz="Náš proces je jednoduchý, transparentní a zaměřený na vaše pohodlí v každé fázi."></p>
+                </div>
+                <div class="relative">
+                    <div class="hidden md:block absolute top-0 left-1/2 w-0.5 h-full bg-gray-200"></div>
+                    <div class="space-y-12 md:space-y-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="flex justify-center md:justify-end md:pr-8">
+                                <div class="text-5xl text-teal opacity-50">1</div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8">
+                                <h3 class="text-xl font-bold" data-i18n="step1-title" data-ua="Консультація та ідея" data-cz="Konzultace a nápad"></h3>
+                                <p class="text-gray-600" data-i18n="step1-desc" data-ua="Обговорюємо ваші побажання, бюджет та ідеї у чаті або по телефону (10-15 хв)." data-cz="Probereme vaše přání, rozpočet a nápady v chatu nebo po telefonu (10-15 min)."></p>
+                            </div>
+                        </div>
+                         <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="flex justify-center md:justify-start md:pl-8 md:order-2">
+                                <div class="text-5xl text-teal opacity-50">2</div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pr-8 md:text-right md:order-1">
+                                <h3 class="text-xl font-bold" data-i18n="step2-title" data-ua="Виміри приміщення" data-cz="Zaměření prostor"></h3>
+                                <p class="text-gray-600" data-i18n="step2-desc" data-ua="Наш спеціаліст приїжджає для точних лазерних замірів або працюємо з вашими планами." data-cz="Náš specialista přijede pro přesné laserové zaměření nebo pracujeme s vašimi plány."></p>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="flex justify-center md:justify-end md:pr-8">
+                                <div class="text-5xl text-teal opacity-50">3</div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8">
+                                <h3 class="text-xl font-bold" data-i18n="step3-title" data-ua="3D-проєкт та кошторис" data-cz="3D návrh a kalkulace"></h3>
+                                <p class="text-gray-600" data-i18n="step3-desc" data-ua="Готуємо візуалізацію та детальний прорахунок. Ви точно знаєте, за що платите." data-cz="Připravíme vizualizaci a podrobnou kalkulaci. Přesně víte, za co platíte."></p>
+                            </div>
+                        </div>
+                         <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="flex justify-center md:justify-start md:pl-8 md:order-2">
+                                <div class="text-5xl text-teal opacity-50">4</div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pr-8 md:text-right md:order-1">
+                                <h3 class="text-xl font-bold" data-i18n="step4-title" data-ua="Виробництво" data-cz="Výroba"></h3>
+                                <p class="text-gray-600" data-i18n="step4-desc" data-ua="Після узгодження проєкту запускаємо виробництво на нашій майстерні в Празі." data-cz="Po schválení návrhu zahájíme výrobu v naší dílně v Praze."></p>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="flex justify-center md:justify-end md:pr-8">
+                                <div class="text-5xl text-teal opacity-50">5</div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8">
+                                <h3 class="text-xl font-bold" data-i18n="step5-title" data-ua="Доставка та монтаж" data-cz="Doprava a montáž"></h3>
+                                <p class="text-gray-600" data-i18n="step5-desc" data-ua="Привозимо готові меблі та професійно встановлюємо їх. Ви приймаєте роботу." data-cz="Přivezeme hotový nábytek a profesionálně ho nainstalujeme. Vy přebíráte práci."></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="bg-charcoal text-warm-white py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title" data-ua="Зв'яжіться з нами" data-cz="Kontaktujte nás"></h2>
+                 <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="contact-intro" data-ua="Готові обговорити ваш проєкт? Надішліть розміри та отримайте безкоштовну 3D-візуалізацію та прорахунок!" data-cz="Jste připraveni probrat váš projekt? Zašlete rozměry a získejte zdarma 3D vizualizaci a kalkulaci!"></p>
+
+                <div class="bg-teal p-8 rounded-lg max-w-md mx-auto mb-10">
+                    <h3 class="text-xl font-bold mb-2" data-i18n="promo-title" data-ua="Спеціальна пропозиція" data-cz="Speciální nabídka"></h3>
+                    <p class="text-2xl font-bold" data-i18n="promo-text" data-ua="-10% на монтаж" data-cz="-10 % na montáž"></p>
+                    <p class="text-sm" data-i18n="promo-date" data-ua="При замовленні до 31.10.2025" data-cz="Při objednávce do 31.10.2025"></p>
+                </div>
+
+                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                     <div class="text-lg">
+                         <p class="font-semibold">WhatsApp / Tel:</p>
+                         <a href="tel:+420722720662" class="hover:text-teal transition-colors">+420 722 720 662</a>
+                     </div>
+                     <div class="text-lg">
+                         <p class="font-semibold">Instagram:</p>
+                         <a href="https://www.instagram.com/muranonabytek" target="_blank" class="hover:text-teal transition-colors">@muranonabytek</a>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-gray-100 text-gray-600 py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>Murano Nábytek s.r.o. | IČO: 23629959</p>
+            <p data-i18n="footer-gdpr" data-ua="GDPR: Ваші контакти використовуються лише для зв’язку щодо замовлення." data-cz="GDPR: Vaše kontakty používáme pouze pro komunikaci ohledně objednávky."></p>
+            <p class="mt-4">© 2025 Murano Nábytek. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = {
+                ua: document.getElementById('lang-ua'),
+                cz: document.getElementById('lang-cz')
+            };
+            const i18nElements = document.querySelectorAll('[data-i18n]');
+            
+            function switchLanguage(lang) {
+                if (!['ua', 'cz'].includes(lang)) lang = 'ua';
+                
+                i18nElements.forEach(el => {
+                    el.textContent = el.dataset[lang] || el.dataset['ua'];
+                });
+
+                document.documentElement.lang = lang;
+                
+                Object.values(langButtons).forEach(btn => btn.classList.remove('active'));
+                if (langButtons[lang]) {
+                    langButtons[lang].classList.add('active');
+                }
+            }
+
+            Object.values(langButtons).forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    switchLanguage(e.target.dataset.lang);
+                });
+            });
+
+            const serviceCards = document.querySelectorAll('.service-card-wrapper');
+            serviceCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const serviceId = card.dataset.service;
+                    const descEl = document.getElementById(`desc-${serviceId}`);
+                    
+                    const wasOpen = !descEl.classList.contains('hidden');
+                    
+                    document.querySelectorAll('.service-description').forEach(el => el.classList.add('hidden'));
+
+                    if (!wasOpen) {
+                        descEl.classList.remove('hidden');
+                    }
+                });
+            });
+
+            switchLanguage('ua');
+        });
+    </script>
+
+</body>
+</html>
