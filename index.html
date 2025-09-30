@@ -65,68 +65,131 @@
             </div>
         </section>
 
-        <section id="services" class="py-16 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="services-title" data-ua="Наші Послуги" data-cz="Naše Služby"></h2>
-                    <p class="text-lg text-gray-600" data-i18n="services-intro" data-ua="Створюємо індивідуальні рішення для кожної кімнати. Натисніть на категорію, щоб дізнатись більше." data-cz="Vytváříme individuální řešení pro každou místnost. Klikněte na kategorii a dozvíte se více."></p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="service-card-wrapper" data-service="kitchens">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
-                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop" 
-                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Kuchyne';"
-                                 alt="Custom kitchen" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold" data-i18n="service-kitchens-title" data-ua="Кухні на замовлення" data-cz="Kuchyně na míru"></h3>
-                            </div>
-                        </div>
-                        <div id="desc-kitchens" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
-                            <p data-i18n="service-kitchens-desc" data-ua="Проектуємо функціональні та стильні кухні з урахуванням всієї техніки, електрики та сантехніки." data-cz="Projektujeme funkční a stylové kuchyně s ohledem na veškeré spotřebiče, elektroinstalaci a vodoinstalaci."></p>
-                        </div>
-                    </div>
-                    <div class="service-card-wrapper" data-service="wardrobes">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
-                            <img src="https://images.unsplash.com/photo-1618221319989-87d3a1f33f01?q=80&w=1964&auto=format&fit=crop"
-                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Skrine';"
-                                 alt="Built-in wardrobe" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold" data-i18n="service-wardrobes-title" data-ua="Шафи-купе та гардеробні" data-cz="Vestavné skříně a šatny"></h3>
-                            </div>
-                        </div>
-                        <div id="desc-wardrobes" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
-                           <p data-i18n="service-wardrobes-desc" data-ua="Оптимізуємо простір за допомогою вбудованих шаф та гардеробних систем будь-якої складності." data-cz="Optimalizujeme prostor pomocí vestavných skříní a šatních systémů jakékoli složitosti."></p>
-                        </div>
-                    </div>
-                    <div class="service-card-wrapper" data-service="bathrooms">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
-                             <img src="https://images.unsplash.com/photo-1599875824823-6a98a445d47e?q=80&w=1964&auto=format&fit=crop"
-                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Koupelny';"
-                                 alt="Bathroom cabinet" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold" data-i18n="service-bathrooms-title" data-ua="Ванні тумби" data-cz="Koupelnové skříňky"></h3>
-                            </div>
-                        </div>
-                         <div id="desc-bathrooms" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
-                           <p data-i18n="service-bathrooms-desc" data-ua="Виготовляємо меблі для ванних кімнат із вологостійких матеріалів з якісною фурнітурою." data-cz="Vyrábíme koupelnový nábytek z vlhkuvzdorných materiálů s kvalitním kováním."></p>
-                        </div>
-                    </div>
-                    <div class="service-card-wrapper" data-service="halls">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
-                            <img src="https://images.unsplash.com/photo-1588730419163-490501a1e0b5?q=80&w=1974&auto=format&fit=crop"
-                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Predsine';"
-                                 alt="Hallway furniture" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold" data-i18n="service-halls-title" data-ua="Прихожі та інше" data-cz="Předsíně a další"></h3>
-                            </div>
-                        </div>
-                        <div id="desc-halls" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
-                           <p data-i18n="service-halls-desc" data-ua="Створюємо комоди, столи, меблі для прихожих та будь-які інші корпусні меблі за вашими розмірами." data-cz="Vyrábíme komody, stoly, předsíňový nábytek a jakýkoli jiný skříňový nábytek na míru."></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section id="services" class="py-16 md:py-24">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4"
+          data-i18n data-ua="Наші Послуги" data-cz="Naše Služby"></h2>
+      <p class="text-lg text-gray-600"
+         data-i18n
+         data-ua="Створюємо індивідуальні рішення для кожної кімнати. Натисніть на категорію, щоб дізнатись більше."
+         data-cz="Vytváříme individuální řešení pro každou místnost. Klikněte na kategorii a dozvíte se více."></p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Кухні -->
+      <div class="service-card-wrapper" data-service="kitchens">
+        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+          <img src="assets/img/kitchen.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Kuchyne';"
+               alt="Custom kitchen" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold"
+                data-i18n data-ua="Кухні на замовлення" data-cz="Kuchyně na míru"></h3>
+          </div>
+        </div>
+        <div id="desc-kitchens" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+          <p data-i18n
+             data-ua="Проектуємо функціональні й стильні кухні з урахуванням техніки, електрики та сантехніки."
+             data-cz="Navrhujeme funkční a stylové kuchyně s ohledem na spotřebiče, elektro a vodu."></p>
+        </div>
+      </div>
+
+      <!-- Шафи / Гардероб -->
+      <div class="service-card-wrapper" data-service="wardrobes">
+        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+          <img src="assets/img/wardrobes.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Skříně';"
+               alt="Wardrobes & walk-in" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold"
+                data-i18n data-ua="Шафи-купе та гардеробні" data-cz="Vestavné skříně a šatny"></h3>
+          </div>
+        </div>
+        <div id="desc-wardrobes" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+          <p data-i18n
+             data-ua="Оптимізуємо простір за допомогою вбудованих систем будь-якої складності."
+             data-cz="Optimalizujeme prostor vestavnými systémy jakékoli složitosti."></p>
+        </div>
+      </div>
+
+      <!-- Ванні -->
+      <div class="service-card-wrapper" data-service="bathrooms">
+        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+          <img src="assets/img/bathroom.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Koupelny';"
+               alt="Bathroom vanity" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold"
+                data-i18n data-ua="Ванні тумби" data-cz="Koupelnové skříňky"></h3>
+          </div>
+        </div>
+        <div id="desc-bathrooms" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+          <p data-i18n
+             data-ua="Виготовляємо вологостійкі рішення з якісною фурнітурою."
+             data-cz="Vyrábíme vlhkuvzdorná řešení s kvalitním kováním."></p>
+        </div>
+      </div>
+
+      <!-- Прихожі -->
+      <div class="service-card-wrapper" data-service="halls">
+        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+          <img src="assets/img/hallway.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Předsíně';"
+               alt="Hallway furniture" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold"
+                data-i18n data-ua="Прихожі та інше" data-cz="Předsíně a další"></h3>
+          </div>
+        </div>
+        <div id="desc-halls" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+          <p data-i18n
+             data-ua="Комоди, тумби, панелі з LED — під ваші розміри."
+             data-cz="Komody, skříňky, LED panely — na míru."></p>
+        </div>
+      </div>
+
+      <!-- Спальні -->
+      <div class="service-card-wrapper" data-service="bedrooms">
+        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+          <img src="assets/img/bedroom.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Ložnice';"
+               alt="Bedroom set" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold"
+                data-i18n data-ua="Спальні" data-cz="Ložnice"></h3>
+          </div>
+        </div>
+        <div id="desc-bedrooms" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+          <p data-i18n
+             data-ua="Ліжка, тумби, панелі, шафи — затишно та функціонально."
+             data-cz="Postele, stolky, panely, skříně — útulně a funkčně."></p>
+        </div>
+      </div>
+
+      <!-- Офісні меблі -->
+      <div class="service-card-wrapper" data-service="office">
+        <div class="bg-white rounded-lg overflow-hidden shadow-oak cursor-pointer transition-transform transform hover:-translate-y-2">
+          <img src="assets/img/office.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/C49A6C/F9F7F3?text=Kancelář';"
+               alt="Office furniture" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold"
+                data-i18n data-ua="Офісні меблі" data-cz="Kancelářský nábytek"></h3>
+          </div>
+        </div>
+        <div id="desc-office" class="service-description hidden mt-4 p-4 bg-gray-100 rounded-lg">
+          <p data-i18n
+             data-ua="Робочі столи, шафи, ресепшн, акустичні панелі — під стиль вашого офісу."
+             data-cz="Pracovní stoly, skříně, recepce, akustické panely — dle stylu vaší kanceláře."></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <section id="benefits" class="bg-gray-50 py-16 md:py-24">
             <div class="container mx-auto px-6">
