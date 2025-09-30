@@ -229,28 +229,46 @@
         </section>
         
         <section id="contact" class="bg-charcoal text-warm-white py-16 md:py-24">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title" data-ua="Зв'яжіться з нами" data-cz="Kontaktujte nás"></h2>
-                 <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="contact-intro" data-ua="Готові обговорити ваш проєкт? Надішліть розміри та отримайте безкоштовну 3D-візуалізацію та прорахунок!" data-cz="Jste připraveni probrat váš projekt? Zašlete rozměry a získejte zdarma 3D vizualizaci a kalkulaci!"></p>
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact-title" data-ua="Зв'яжіться з нами" data-cz="Kontaktujte nás"></h2>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="contact-intro" data-ua="Готові обговорити ваш проєкт? Надішліть розміри та отримайте безкоштовну 3D-візуалізацію та прорахунок!" data-cz="Jste připraveni probrat váš projekt? Zašlete rozměry a získejte zdarma 3D vizualizaci a kalkulaci!"></p>
 
-                <div class="bg-teal p-8 rounded-lg max-w-md mx-auto mb-10">
-                    <h3 class="text-xl font-bold mb-2" data-i18n="promo-title" data-ua="Спеціальна пропозиція" data-cz="Speciální nabídka"></h3>
-                    <p class="text-2xl font-bold" data-i18n="promo-text" data-ua="-10% на монтаж" data-cz="-10 % na montáž"></p>
-                    <p class="text-sm" data-i18n="promo-date" data-ua="При замовленні до 31.10.2025" data-cz="Při objednávce do 31.10.2025"></p>
-                </div>
+    <div class="bg-warm-white text-charcoal p-8 rounded-lg max-w-lg mx-auto mb-10">
+      <form action="https://formspree.io/f/mrbyqylv" method="POST" class="space-y-4">
+        <div>
+          <label class="block mb-2 font-semibold" for="name">Ваше ім’я</label>
+          <input type="text" name="name" id="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal">
+        </div>
 
-                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                     <div class="text-lg">
-                         <p class="font-semibold">WhatsApp / Tel:</p>
-                         <a href="tel:+420722720662" class="hover:text-teal transition-colors">+420 722 720 662</a>
-                     </div>
-                     <div class="text-lg">
-                         <p class="font-semibold">Instagram:</p>
-                         <a href="https://www.instagram.com/muranonabytek" target="_blank" class="hover:text-teal transition-colors">@muranonabytek</a>
-                     </div>
-                 </div>
-            </div>
-        </section>
+        <div>
+          <label class="block mb-2 font-semibold" for="phone">Телефон / WhatsApp</label>
+          <input type="tel" name="phone" id="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal">
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold" for="message">Повідомлення</label>
+          <textarea name="message" id="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal"></textarea>
+        </div>
+
+        <button type="submit" class="bg-teal hover:bg-teal/90 text-warm-white font-bold py-3 px-6 rounded-lg transition">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+      <div class="text-lg">
+        <p class="font-semibold">WhatsApp / Тел.</p>
+        <a href="tel:+420722720662" class="hover:text-teal transition-colors">+420 722 720 662</a>
+      </div>
+      <div class="text-lg">
+        <p class="font-semibold">Instagram:</p>
+        <a href="https://www.instagram.com/muranonabytek" target="_blank" class="hover:text-teal transition-colors">@muranonabytek</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     </main>
     <footer class="bg-gray-100 text-gray-600 py-8">
