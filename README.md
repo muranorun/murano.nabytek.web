@@ -1,2 +1,2 @@
-# Murano Nabytek Web
-Landing page for custom furniture.
+# Murano Nábytek Web
+Вебсайт компанії Murano Nábytek — меблі на замовлення у Празі.
